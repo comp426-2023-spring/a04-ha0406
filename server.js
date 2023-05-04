@@ -35,11 +35,11 @@ app.get("/app/rpsls/play/", (req, res) => {
 })
 
 // /play/ rps and rpsls BODY
-app.get("/app/rps/play/", (req, res) => {
+app.post("/app/rps/play/", (req, res) => {
   res.status(200).send(JSON.stringify(rps(req.body.shot)));
 })
 
-app.get("/app/rpsls/play/", (req, res) => {
+app.post("/app/rpsls/play/", (req, res) => {
   res.status(200).send(JSON.stringify(rpsls(req.body.shot)));
 })
 
